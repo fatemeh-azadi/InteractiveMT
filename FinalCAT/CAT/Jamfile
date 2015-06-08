@@ -1,0 +1,8 @@
+alias deps : server.cpp Distance.cpp ECModelSearchGraph.cpp searchnbest.cpp TranslationTask.cpp TER/TERCalc.cpp TER/TERShift.cpp CaitraSearchGraph.cpp CaitraWithWindow.cpp WordVector.cpp CaitraWordVec.cpp porter2stemmer.cpp MainCaitra.cpp ModifiedCaitra.cpp CaitraWithJump.cpp WeightedCaitraWithJump.cpp ..//z ..//boost_iostreams ..//boost_filesystem ..//moses-cmd ../moses//moses OnlineLearner.cpp OnlineLearning/MiraOptimiser.cpp  OnlineLearning/Hildreth.cpp
+OnlineLearning/SparseVec.cpp ;
+
+
+#alias dep2 : client.cpp ;
+exe cat-server : CAT-Server.cpp deps ;
+#exe cat-client : CAT-Client.cpp dep2 ;
+alias programs : cat-server ;

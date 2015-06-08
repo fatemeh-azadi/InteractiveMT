@@ -1,0 +1,19 @@
+
+* The CAT server will be exactly installed like moses-v2.1.1 with:
+
+	./bjam [--with-srilm] [--with-irstlm]
+
+(for using LM backoff model it should be installed with srilm or irstlm)
+
+
+* For installing the CAT client go to FinalCAT/CAT-client and run:
+	
+	make
+
+* For running the CAT, there are 2 scripts: RunServer.sh and RunClient.sh
+RunServer.sh gets a port number and run CAT Server on it, with the options defined in that script.
+RunClient.sh gets the server port number and run the client. It will get the test input and it's reference and simulating the user's translation process with the server offers
+
+The results will be saved in the Outputs folder. The server offers and the total KSMR will be in the Client-Log file, and the number of interactions, average search time and some other statistics are written at the end of the Server-Log file.  
+
+
